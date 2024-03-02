@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr" xmlns:th="https://www.thymeleaf.org">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>article</title>
+    <title>Title</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
 </head>
 <body>
-<th:block th:insert="~{/component/_utils/article :: article }"></th:block>
 
 <!-- component -->
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
@@ -36,29 +34,32 @@
 
 <div class="w-screen  bg-gray-100 flex items-center justify-center px-5 py-5 relative" x-data="{showCookieBanner:true}">
     <div class="px-3 text-center">
-        <button id="btn" class="py-2 px-8 bg-gray-800 hover:bg-gray-900 text-white rounded font-bold text-sm shadow-xl mr-3" @click.prevent="document.getElementById('cookiesModal').showModal()">Ajouter une Catégorie</button>
+        <button id="btn" class="py-2 px-8 bg-gray-800 hover:bg-gray-900 text-white rounded font-bold text-sm shadow-xl mr-3" @click.prevent="document.getElementById('cookiesModal').showModal()">Ajouter un article</button>
     </div>
     <dialog id="cookiesModal" class="h-auto w-11/12 md:w-1/2 bg-white overflow-hidden rounded-md p-0">
         <div class="flex flex-col w-full h-auto">
             <div class="flex w-full h-auto items-center px-5 py-3">
                 <div class="w-10/12 h-auto text-lg font-bold">
-                    Nouvelle Catégorie
+                    Modifier L'article
                 </div>
                 <div class="flex w-2/12 h-auto justify-end">
-                    <button @click.prevent="document.getElementById('cookiesModal').close();" class="cursor-pointer focus:outline-none text-gray-400 hover:text-gray-800">
-                        <i class="mdi mdi-close-circle-outline text-2xl"></i>
-                    </button>
+                    <a
+                            class="cursor-pointer focus:outline-none text-gray-400 hover:text-gray-800"
+                            th:href="@{/categories}">  <i class="mdi mdi-close-circle-outline text-2xl"></i></a>
+                    <!--<button @click.prevent="document.getElementById('cookiesModal').close();" class="cursor-pointer focus:outline-none text-gray-400 hover:text-gray-800">
+
+                    </button>-->
                 </div>
             </div>
 
-            <!--********** Form-->
-            <!--            <div class="mx-auto max-w-[1920px] px-4 md:px-8 2xl:px-16">-->
+            <!--********** Form  ****************-->
             <div
                     style="display: flex; justify-content: center;"
 
             >
                 <div class="md:w-full lg:w-3/5 2xl:w-4/6 flex h-full ltr:md:ml-7 rtl:md:mr-7 flex-col ltr:lg:pl-7 rtl:lg:pr-7">
-                    <form class="w-full mx-auto flex flex-col justify-center " th:object="${category}" method="post" th:action="@{/categories}">
+                    <form class="w-full mx-auto flex flex-col justify-center " th:object="${category}" method="post" th:action="@{/categories/update}">
+                        <input type="hidden" th:field="*{id}">
                         <div class="flex flex-col space-y-5">
                             <div class="flex flex-col md:flex-row space-y-5 md:space-y-0 gap-4">
                                 <div class="w-full md:w-1/2 ">
@@ -77,7 +78,6 @@
                                             aria-invalid="false"
                                     />
                                 </div>
-
                             </div>
 
                             <div class="relative">
@@ -86,17 +86,15 @@
                                         class="text-[13px] md:text-sm leading-4 inline-flex items-center cursor-pointer transition ease-in-out duration-300 font-semibold font-body text-center justify-center border-0 border-transparent placeholder-white focus-visible:outline-none focus:outline-none  bg-black text-white px-5 md:px-6 lg:px-8 py-4 md:py-3.5 lg:py-4 hover:text-white hover:bg-gray-600 hover:shadow-cart h-12 lg:h-14 mt-1 text-sm lg:text-base w-full sm:w-auto"
                                         type="submit"
                                 >
-                                    Ajouter
+                                    Modifer
                                 </button>
-                                <button
-                                        @click.prevent="document.getElementById('cookiesModal').close();"
-                                        data-variant="flat"
-                                        class="text-[13px] md:text-sm leading-4 inline-flex items-center cursor-pointer transition ease-in-out duration-300 font-semibold font-body text-center justify-center border-0 border-transparent placeholder-white focus-visible:outline-none focus:outline-none  bg-black text-white px-5 md:px-6 lg:px-8 py-4 md:py-3.5 lg:py-4 hover:text-white hover:bg-gray-600 hover:shadow-cart h-12 lg:h-14 mt-1 text-sm lg:text-base w-full sm:w-auto"
-                                        type="submit"
-                                >
-                                    Annuler
-                                </button>
-                            </div>
+
+                            <a
+                                    class="text-[13px] md:text-sm leading-4 inline-flex items-center cursor-pointer transition ease-in-out duration-300 font-semibold font-body text-center justify-center border-0 border-transparent placeholder-white focus-visible:outline-none focus:outline-none  bg-black text-white px-5 md:px-6 lg:px-8 py-4 md:py-3.5 lg:py-4 hover:text-white hover:bg-gray-600 hover:shadow-cart h-12 lg:h-14 mt-1 text-sm lg:text-base w-full sm:w-auto"
+
+                                    th:href="@{/categories}"> annuler</a>
+
+                        </div>
                         </div>
                     </form>
                 </div>
@@ -109,45 +107,13 @@
 <!-- BUY ME A BEER AND HELP SUPPORT OPEN-SOURCE RESOURCES -->
 <div class="flex items-end justify-end fixed bottom-0 right-0 mb-4 mr-4 z-10">
     <div>
-        <!--        <a title="Buy me a beer" href="https://www.buymeacoffee.com/scottwindon" target="_blank" class="block w-16 h-16 rounded-full transition-all shadow hover:shadow-lg transform hover:scale-110 hover:rotate-12">-->
-        <a title="Buy me a beer" href="/" target="_blank" class="block w-16 h-16 rounded-full transition-all shadow hover:shadow-lg transform hover:scale-110 hover:rotate-12">
+        <a title="Buy me a beer" href="https://www.buymeacoffee.com/scottwindon" target="_blank" class="block w-16 h-16 rounded-full transition-all shadow hover:shadow-lg transform hover:scale-110 hover:rotate-12">
             <img class="object-cover object-center w-full h-full rounded-full" src="https://i.pinimg.com/originals/60/fd/e8/60fde811b6be57094e0abc69d9c2622a.jpg"/>
         </a>
     </div>
 </div>
-
-<!--******** FORM -->
-
-
-<!--******** EndFORM -->
-
-
-<!-- component -->
-<section class="container mx-auto p-6 font-mono" style="margin-top: 3rem">
-    <div class="w-full mb-8 overflow-hidden rounded-lg shadow-lg">
-        <div class="w-full overflow-x-auto">
-            <table class="w-full">
-                <thead>
-                <tr class="text-md font-semibold tracking-wide text-left text-gray-900 bg-gray-100 uppercase border-b border-gray-600">
-                    <th class="px-4 py-3">Nom de la catégorie</th>
-                    <th class="px-4 py-3">Action</th>
-                </tr>
-                </thead>
-                <tbody class="bg-white">
-
-                <tr class="text-gray-700" th:each="category : ${categories}">
-                    <td class="px-4 py-3 text-ms font-semibold border" th:text="${category.getName()}"></td>
-                    <td class="px-4 py-3 text-sm border">
-                        <a  th:href="@{/categories/delete/__${category.getId()}__}"> <img width="20" th:src="@{svg/delete.png}" alt="delete"></a>
-                        <a id="edit" th:href="@{/categories/edit/__${category.getId()}__}"> <img width="20" th:src="@{svg/edit.png}" alt="edit"></a>
-                    </td>
-                </tr>
-
-                </tbody>
-            </table>
-        </div>
-    </div>
-</section>
-
+<script>
+    document.getElementById('cookiesModal').showModal()
+</script>
 </body>
 </html>
