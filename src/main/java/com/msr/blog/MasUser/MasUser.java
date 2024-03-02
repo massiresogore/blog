@@ -69,6 +69,10 @@ public class MasUser {
     public List<Comment> getComments() {
         return comments;
     }
+    public int getNumberOfComments() {
+        return comments.size();
+    }
+
 
     public void setComments(List<Comment> comments) {
         this.comments = comments;

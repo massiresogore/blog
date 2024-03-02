@@ -2,6 +2,8 @@ package com.msr.blog.article;
 
 import com.msr.blog.category.Category;
 import com.msr.blog.category.CategoryRepository;
+import com.msr.blog.comment.Comment;
+import com.msr.blog.comment.CommentService;
 import org.springframework.data.relational.core.sql.In;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,10 +14,12 @@ import org.springframework.web.bind.annotation.*;
 public class ArtcileController {
     private final ArticleService articleService;
     private final CategoryRepository categoryRepository;
+    private final CommentService commentService;
 
-    public ArtcileController(ArticleService articleService, CategoryRepository categoryRepository) {
+    public ArtcileController(ArticleService articleService, CategoryRepository categoryRepository, CommentService commentService) {
         this.articleService = articleService;
         this.categoryRepository = categoryRepository;
+        this.commentService = commentService;
     }
 
     @GetMapping
@@ -57,5 +61,28 @@ public class ArtcileController {
         articleService.delete(Integer.parseInt(id));
 //        System.out.println(article);
         return "redirect:/articles";
+    }
+
+    @GetMapping("/comment/{id}")
+    public String comment(@ModelAttribute Article article,@PathVariable("id") String id, Model model)
+    {
+        // recuperer larticle
+        Article retrievedArticle = articleService.find(Integer.parseInt(id));
+        //recupéré ses commentaires
+
+//        Article findArticle = articleService.find(Integer.parseInt(id));
+        model.addAttribute("categories", categoryRepository.findAll());
+        model.addAttribute("article", articleService.find(Integer.parseInt(id)) );
+        model.addAttribute("comments",retrievedArticle.getComments());
+        model.addAttribute("comment", new Comment());
+        return "pages/article/comment";
+    }
+
+    @PostMapping("/comment")
+    public String comment(@RequestParam("article") String article, @RequestParam("manUser") String manUser ,@RequestParam("comment") String comment, Model model)
+    {
+
+      Comment newComment =  commentService.commentArticle(article, manUser,comment);
+        return "redirect:/articles/comment/"+article;
     }
 }

@@ -4,6 +4,8 @@ import com.msr.blog.MasUser.MasUser;
 import com.msr.blog.article.Article;
 import jakarta.persistence.*;
 
+import java.util.Date;
+
 @Entity
 @Table(name = "comment")
 public class Comment {
@@ -21,14 +23,16 @@ public class Comment {
     @JoinColumn(nullable = false)
     private MasUser masUser;
 
+    Date date = new Date();
+
+    public Date getDate() {
+        return date;
+    }
 
     public Comment() {
     }
 
-    public Comment(Integer id, String content) {
-        this.id = id;
-        this.content = content;
-    }
+
 
     public Integer getId() {
         return id;
@@ -62,4 +66,13 @@ public class Comment {
         this.masUser = masUser;
     }
 
+    @Override
+    public String toString() {
+        return "Comment{" +
+                "id=" + id +
+                ", content='" + content + '\'' +
+                ", article=" + article.getId() +
+                ", masUser=" + masUser.getId() +
+                '}';
+    }
 }
