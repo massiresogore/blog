@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+<th:block th:insert="~{/component/_utils/navfooter :: nav }"></th:block>
+
+
+<!--Barner-->
+<!-- component -->
+<div class="w-full">
+    <!--nav-->
+    <div class="flex bg-white" style="height:600px;">
+        <div class="flex items-center text-center lg:text-left px-8 md:px-12 lg:w-1/2">
+            <div>
+                <h2 class="text-3xl font-semibold text-gray-800 md:text-4xl">Welcome to our new <span class="text-indigo-600">Blog</span></h2>
+                <p class="mt-2 text-sm text-gray-500 md:text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis commodi cum cupiditate ducimus, fugit harum id necessitatibus odio quam quasi, quibusdam rem tempora voluptates. Cumque debitis dignissimos id quam vel!</p>
+                <div class="flex justify-center lg:justify-start mt-6">
+                    <a class="px-4 py-3 bg-gray-900 text-gray-200 text-xs font-semibold rounded hover:bg-gray-800" href="#">Get Started</a>
+                    <a class="mx-4 px-4 py-3 bg-gray-300 text-gray-900 text-xs font-semibold rounded hover:bg-gray-400" href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="hidden lg:block lg:w-1/2" style="clip-path:polygon(10% 0, 100% 0%, 100% 100%, 0 100%)">
+            <div class="h-full object-cover" style="background-image: url(https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80)">
+                <div class="h-full bg-black opacity-25"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End Barner-->
+
+
+<!--Articles-->
+<div class="p-24 flex flex-wrap items-center justify-center" id="articles">
+<div>
+    <h2 style="margin-bottom: 5px" class="text-3xl font-semibold text-gray-800 md:text-4xl" >Nos <span class="text-indigo-600 " >Articles</span></h2>
+    <a  class="mx-4 px-4 py-3 bg-gray-300 text-gray-900 text-xs font-semibold rounded hover:bg-gray-400" th:href="@{/articles}">Ajouter plus d'article</a>
+    <a style="display: block;margin-top: 23px; " th:href="@{/}">
+        <img width="20" th:src="@{svg/iconHome.svg}" alt="home icone">
+        home</a>
+</div>
+
+    <div class="flex-shrink-0 m-6 relative overflow-hidden bg-orange-500 rounded-lg max-w-xs shadow-lg" th:each="article : ${articles}">
+        <svg class="absolute bottom-0 left-0 mb-8" viewBox="0 0 375 283" fill="none" style="transform: scale(1.5); opacity: 0.1;">
+            <rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)" fill="white"/>
+            <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white"/>
+        </svg>
+        <div class="relative pt-10 px-10 flex items-center justify-center">
+            <div class="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3" style="background: radial-gradient(black, transparent 60%); transform: rotate3d(0, 0, 1, 20deg) scale3d(1, 0.6, 1); opacity: 0.2;"></div>
+            <img class="relative w-40" th:src="${article.getImage_url()}" alt="">
+        </div>
+        <div class="relative text-white px-6 pb-6 mt-6">
+            <span class="block opacity-75 -mb-1" th:text="${article.category.name}"></span>
+            <div class="flex justify-between">
+                <span class="block font-semibold text-xl" th:text="${article.getTitle()}"></span>
+                <span class="block bg-white rounded-full text-orange-500 text-xs font-bold px-3 py-2 leading-none flex items-center" th:text="${'$'+article.getPrice()}" ></span>
+            </div>
+        </div>
+    </div>
+
+   <!-- <div class="flex-shrink-0 m-6 relative overflow-hidden bg-teal-500 rounded-lg max-w-xs shadow-lg">
+        <svg class="absolute bottom-0 left-0 mb-8" viewBox="0 0 375 283" fill="none" style="transform: scale(1.5); opacity: 0.1;">
+            <rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)" fill="white"/>
+            <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white"/>
+        </svg>
+        <div class="relative pt-10 px-10 flex items-center justify-center">
+            <div class="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3" style="background: radial-gradient(black, transparent 60%); transform: rotate3d(0, 0, 1, 20deg) scale3d(1, 0.6, 1); opacity: 0.2;"></div>
+            <img class="relative w-40" src="https://user-images.githubusercontent.com/2805249/64069998-305de300-cc9a-11e9-8ae7-5a0fe00299f2.png" alt="">
+        </div>
+        <div class="relative text-white px-6 pb-6 mt-6">
+            <span class="block opacity-75 -mb-1">Outdoor</span>
+            <div class="flex justify-between">
+                <span class="block font-semibold text-xl">Monstera</span>
+                <span class="block bg-white rounded-full text-teal-500 text-xs font-bold px-3 py-2 leading-none flex items-center">$45.00</span>
+            </div>
+        </div>
+    </div>
+    <div class="flex-shrink-0 m-6 relative overflow-hidden bg-purple-500 rounded-lg max-w-xs shadow-lg">
+        <svg class="absolute bottom-0 left-0 mb-8" viewBox="0 0 375 283" fill="none" style="transform: scale(1.5); opacity: 0.1;">
+            <rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)" fill="white"/>
+            <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white"/>
+        </svg>
+        <div class="relative pt-10 px-10 flex items-center justify-center">
+            <div class="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3" style="background: radial-gradient(black, transparent 60%); transform: rotate3d(0, 0, 1, 20deg) scale3d(1, 0.6, 1); opacity: 0.2;"></div>
+            <img class="relative w-40" src="https://user-images.githubusercontent.com/2805249/64069899-8bdaa180-cc97-11e9-9b19-1a9e1a254c18.png" alt="">
+        </div>
+        <div class="relative text-white px-6 pb-6 mt-6">
+            <span class="block opacity-75 -mb-1">Outdoor</span>
+            <div class="flex justify-between">
+                <span class="block font-semibold text-xl">Oak Tree</span>
+                <span class="block bg-white rounded-full text-purple-500 text-xs font-bold px-3 py-2 leading-none flex items-center">$68.50</span>
+            </div>
+        </div>
+    </div>-->
+</div>
+<!--EndArticles-->
+
+
+
+
+<!--Footer-->
+<th:block th:insert="~{/component/_utils/navfooter :: footer }">
+<!--EndFooter-->
+
+</th:block>
+
+</body>
+</html>

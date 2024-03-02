@@ -1,0 +1,292 @@
+<!--****************   Articles   **************-->
+<div class="p-24 flex flex-wrap items-center justify-center">
+    <div class="flex-shrink-0 m-6 relative overflow-hidden bg-orange-500 rounded-lg max-w-xs shadow-lg">
+        <svg class="absolute bottom-0 left-0 mb-8" viewBox="0 0 375 283" fill="none" style="transform: scale(1.5); opacity: 0.1;">
+            <rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)" fill="white"/>
+            <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white"/>
+        </svg>
+        <div class="relative pt-10 px-10 flex items-center justify-center">
+            <div class="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3" style="background: radial-gradient(black, transparent 60%); transform: rotate3d(0, 0, 1, 20deg) scale3d(1, 0.6, 1); opacity: 0.2;"></div>
+            <img class="relative w-40" src="https://user-images.githubusercontent.com/2805249/64069899-8bdaa180-cc97-11e9-9b19-1a9e1a254c18.png" alt="">
+        </div>
+        <div class="relative text-white px-6 pb-6 mt-6">
+            <span class="block opacity-75 -mb-1">Indoor</span>
+            <div class="flex justify-between">
+                <span class="block font-semibold text-xl">Peace Lily</span>
+                <span class="block bg-white rounded-full text-orange-500 text-xs font-bold px-3 py-2 leading-none flex items-center">$36.00</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex-shrink-0 m-6 relative overflow-hidden bg-teal-500 rounded-lg max-w-xs shadow-lg">
+        <svg class="absolute bottom-0 left-0 mb-8" viewBox="0 0 375 283" fill="none" style="transform: scale(1.5); opacity: 0.1;">
+            <rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)" fill="white"/>
+            <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white"/>
+        </svg>
+        <div class="relative pt-10 px-10 flex items-center justify-center">
+            <div class="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3" style="background: radial-gradient(black, transparent 60%); transform: rotate3d(0, 0, 1, 20deg) scale3d(1, 0.6, 1); opacity: 0.2;"></div>
+            <img class="relative w-40" src="https://user-images.githubusercontent.com/2805249/64069998-305de300-cc9a-11e9-8ae7-5a0fe00299f2.png" alt="">
+        </div>
+        <div class="relative text-white px-6 pb-6 mt-6">
+            <span class="block opacity-75 -mb-1">Outdoor</span>
+            <div class="flex justify-between">
+                <span class="block font-semibold text-xl">Monstera</span>
+                <span class="block bg-white rounded-full text-teal-500 text-xs font-bold px-3 py-2 leading-none flex items-center">$45.00</span>
+            </div>
+        </div>
+    </div>
+    <div class="flex-shrink-0 m-6 relative overflow-hidden bg-purple-500 rounded-lg max-w-xs shadow-lg">
+        <svg class="absolute bottom-0 left-0 mb-8" viewBox="0 0 375 283" fill="none" style="transform: scale(1.5); opacity: 0.1;">
+            <rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)" fill="white"/>
+            <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white"/>
+        </svg>
+        <div class="relative pt-10 px-10 flex items-center justify-center">
+            <div class="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3" style="background: radial-gradient(black, transparent 60%); transform: rotate3d(0, 0, 1, 20deg) scale3d(1, 0.6, 1); opacity: 0.2;"></div>
+            <img class="relative w-40" src="https://user-images.githubusercontent.com/2805249/64069899-8bdaa180-cc97-11e9-9b19-1a9e1a254c18.png" alt="">
+        </div>
+        <div class="relative text-white px-6 pb-6 mt-6">
+            <span class="block opacity-75 -mb-1">Outdoor</span>
+            <div class="flex justify-between">
+                <span class="block font-semibold text-xl">Oak Tree</span>
+                <span class="block bg-white rounded-full text-purple-500 text-xs font-bold px-3 py-2 leading-none flex items-center">$68.50</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!--*************   EndArticles  *************-->
+
+
+<!--*************   TabArticle  *************-->
+ <tr class="text-gray-700">
+                    <td class="px-4 py-3 border">
+                        <div class="flex items-center text-sm">
+                            <div class="relative w-8 h-8 mr-3 rounded-full">
+                                <img class="object-cover w-full h-full rounded-full" src="https://images.pexels.com/photos/5212324/pexels-photo-5212324.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="" loading="lazy" />
+                                <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-black">Stevens</p>
+                                <p class="text-xs text-gray-600">Programmer</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="px-4 py-3 text-md font-semibold border">27</td>
+                    <td class="px-4 py-3 text-xs border">
+                        <span class="px-2 py-1 font-semibold leading-tight text-orange-700 bg-gray-100 rounded-sm"> Pending </span>
+                    </td>
+                    <td class="px-4 py-3 text-sm border">6/10/2020</td>
+                </tr>
+                <tr class="text-gray-700">
+                    <td class="px-4 py-3 border">
+                        <div class="flex items-center text-sm">
+                            <div class="relative w-8 h-8 mr-3 rounded-full">
+                                <img class="object-cover w-full h-full rounded-full" src="https://images.pexels.com/photos/5212324/pexels-photo-5212324.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="" loading="lazy" />
+                                <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Nora</p>
+                                <p class="text-xs text-gray-600">Designer</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="px-4 py-3 text-md font-semibold border">17</td>
+                    <td class="px-4 py-3 text-xs border">
+                        <span class="px-2 py-1 font-semibold leading-tight text-red-700 bg-red-100 rounded-sm"> Nnacceptable </span>
+                    </td>
+                    <td class="px-4 py-3 text-sm border">6/10/2020</td>
+                </tr>
+                <tr class="text-gray-700">
+                    <td class="px-4 py-3 border">
+                        <div class="flex items-center text-sm">
+                            <div class="relative w-8 h-8 mr-3 rounded-full">
+                                <img class="object-cover w-full h-full rounded-full" src="https://images.pexels.com/photos/5212324/pexels-photo-5212324.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="" loading="lazy" />
+                                <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Ali</p>
+                                <p class="text-xs text-gray-600">Programmer</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="px-4 py-3 border text-md font-semibold">23</td>
+                    <td class="px-4 py-3 border text-xs">
+                        <span class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-sm"> Acceptable </span>
+                    </td>
+                    <td class="px-4 py-3 border text-sm">6/10/2020</td>
+                </tr>
+                <tr class="text-gray-700">
+                    <td class="px-4 py-3 border">
+                        <div class="flex items-center text-sm">
+                            <div class="relative w-8 h-8 mr-3 rounded-full">
+                                <img class="object-cover w-full h-full rounded-full" src="https://images.pexels.com/photos/5212324/pexels-photo-5212324.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="" loading="lazy" />
+                                <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Khalid</p>
+                                <p class="text-xs text-gray-600">Designer</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="px-4 py-3 border text-md font-semibold">20</td>
+                    <td class="px-4 py-3 border text-xs">
+                        <span class="px-2 py-1 font-semibold leading-tight text-gray-700 bg-gray-100 rounded-sm"> Pending </span>
+                    </td>
+                    <td class="px-4 py-3 border text-sm">6/10/2020</td>
+                </tr>
+                <tr class="text-gray-700">
+                    <td class="px-4 py-3 border">
+                        <div class="flex items-center text-sm">
+                            <div class="relative w-8 h-8 mr-3 rounded-full">
+                                <img class="object-cover w-full h-full rounded-full" src="https://images.pexels.com/photos/5212324/pexels-photo-5212324.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="" loading="lazy" />
+                                <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Nasser</p>
+                                <p class="text-xs text-gray-600">Pen Tester</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="px-4 py-3 border text-md font-semibold">29</td>
+                    <td class="px-4 py-3 border text-xs">
+                        <span class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-sm"> Acceptable </span>
+                    </td>
+                    <td class="px-4 py-3 border text-sm">6/10/2020</td>
+                </tr>
+                <tr class="text-gray-700">
+                    <td class="px-4 py-3 border">
+                        <div class="flex items-center text-sm">
+                            <div class="relative w-8 h-8 mr-3 rounded-full">
+                                <img class="object-cover w-full h-full rounded-full" src="https://images.pexels.com/photos/5212324/pexels-photo-5212324.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="" loading="lazy" />
+                                <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Mohammed</p>
+                                <p class="text-xs text-gray-600">Web Designer</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="px-4 py-3 border text-md font-semibold">38</td>
+                    <td class="px-4 py-3 border text-xs">
+                        <span class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-sm"> Acceptable </span>
+                    </td>
+                    <td class="px-4 py-3 border text-sm">6/10/2020</td>
+                </tr>
+                <tr class="text-gray-700">
+                    <td class="px-4 py-3 border">
+                        <div class="flex items-center text-sm">
+                            <div class="relative w-8 h-8 mr-3 rounded-full">
+                                <img class="object-cover w-full h-full rounded-full" src="https://images.pexels.com/photos/5212324/pexels-photo-5212324.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="" loading="lazy" />
+                                <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Saad</p>
+                                <p class="text-xs text-gray-600">Data</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="px-4 py-3 border text-md font-semibold">19</td>
+                    <td class="px-4 py-3 border text-xs">
+                        <span class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-sm"> Acceptable </span>
+                    </td>
+                    <td class="px-4 py-3 border text-sm">6/10/2020</td>
+                </tr>
+                <tr class="text-gray-700">
+                    <td class="px-4 py-3 border">
+                        <div class="flex items-center text-sm">
+                            <div class="relative w-8 h-8 mr-3 rounded-full">
+                                <img class="object-cover w-full h-full rounded-full" src="https://images.pexels.com/photos/5212324/pexels-photo-5212324.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="" loading="lazy" />
+                                <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Sami</p>
+                                <p class="text-xs text-gray-600">Developer</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="px-4 py-3 border text-md font-semibold">21</td>
+                    <td class="px-4 py-3 border text-xs">
+                        <span class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-sm"> Acceptable </span>
+                    </td>
+                    <td class="px-4 py-3 border text-sm">6/10/2020</td>
+                </tr>
+<!--*************   EndTabArticle  *************-->
+
+
+
+
+<!--*************   Form  *************-->
+ <form class="w-full mx-auto flex flex-col justify-center ">
+            <div class="flex flex-col space-y-5">
+                <div class="flex flex-col md:flex-row space-y-5 md:space-y-0 gap-4">
+                    <div class="w-full md:w-1/2 ">
+                        <label for="name" class="block text-gray-600 font-semibold text-sm leading-none mb-3 cursor-pointer">
+                            Your Name (required)
+                        </label>
+                        <input
+                                id="name"
+                                name="name"
+                                type="text"
+                                placeholder="Enter Your Name"
+                                class="py-2 px-4 md:px-5 w-full appearance-none transition duration-150 ease-in-out border text-input text-xs lg:text-sm font-body placeholder-body min-h-12 transition duration-200 ease-in-out bg-white border-gray-300 focus:outline-none focus:border-heading h-11 md:h-12"
+                                autoComplete="off"
+                                spellCheck="false"
+                                aria-invalid="false"
+                        />
+                    </div>
+                    <div class="w-full md:w-1/2 ltr:md:ml-2.5 rtl:md:mr-2.5 ltr:lg:ml-5 rtl:lg:mr-5 mt-2 md:mt-0">
+                        <label for="email" class="block text-gray-600 font-semibold text-sm leading-none mb-3 cursor-pointer">
+                            Your Email (required)
+                        </label>
+                        <input
+                                id="email"
+                                name="email"
+                                type="email"
+                                placeholder="Enter Your Email"
+                                class="py-2 px-4 md:px-5 w-full appearance-none transition duration-150 ease-in-out border text-input text-xs lg:text-sm font-body placeholder-body min-h-12 transition duration-200 ease-in-out bg-white border-gray-300 focus:outline-none focus:border-heading h-11 md:h-12"
+                                autoComplete="off"
+                                spellCheck="false"
+                                aria-invalid="false"
+                        />
+                    </div>
+                </div>
+                <div class="relative">
+                    <label for="subject"  class="block text-gray-600 font-semibold text-sm leading-none mb-3 cursor-pointer">
+                        Subject
+                    </label>
+                    <input
+                            id="subject"
+                            name="subject"
+                            type="text"
+                            placeholder="Enter Your Subject"
+                            class="py-2 px-4 md:px-5 w-full appearance-none transition duration-150 ease-in-out border text-input text-xs lg:text-sm font-body placeholder-body min-h-12 transition duration-200 ease-in-out bg-white border-gray-300 focus:outline-none focus:border-heading h-11 md:h-12"
+                            autoComplete="off"
+                            spellCheck="false"
+                            aria-invalid="false"
+                    />
+                </div>
+                <div class="relative mb-4">
+                    <label for="message"  class="block text-gray-600 font-semibold text-sm leading-none mb-3">
+                        Message
+                    </label>
+                    <textarea
+                            id="message"
+                            name="message"
+                            class="px-4 py-3 flex items-center w-full appearance-none transition duration-300 ease-in-out text-heading text-sm focus:outline-none focus:ring-0 bg-white border border-gray-300 focus:shadow focus:outline-none focus:border-heading placeholder-body"
+                            autoComplete="off"
+                            spellCheck="false"
+                            rows={4}
+                            placeholder="Write your message here"
+                    ></textarea>
+                </div>
+                <div class="relative">
+                    <button
+                            data-variant="flat"
+                            class="text-[13px] md:text-sm leading-4 inline-flex items-center cursor-pointer transition ease-in-out duration-300 font-semibold font-body text-center justify-center border-0 border-transparent placeholder-white focus-visible:outline-none focus:outline-none  bg-black text-white px-5 md:px-6 lg:px-8 py-4 md:py-3.5 lg:py-4 hover:text-white hover:bg-gray-600 hover:shadow-cart h-12 lg:h-14 mt-1 text-sm lg:text-base w-full sm:w-auto"
+                            type="submit"
+                    >
+                        Send Message
+                    </button>
+                </div>
+            </div>
+        </form>
+<!--*************   EndForm  *************-->
