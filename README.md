@@ -1,4 +1,4 @@
-# blog Spring Boot Thymeleaf - Devoir de Classe 1er Mars 2024
+# blog Spring Boot Thymeleaf - Devoir de Classe 1er Mars 2024 , terminer le 2 mars à 22h
 
 /****** Expect ****/
 -   Relation OneToMany crée avec ceci
