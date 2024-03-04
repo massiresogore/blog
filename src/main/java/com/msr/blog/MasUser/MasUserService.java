@@ -61,5 +61,7 @@ public class MasUserService {
     }
 
 
-
+    public MasUser findManUserByUsername(String name) {
+        return masUserRepository.findByUsername(name);
+    }
 }

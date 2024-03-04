@@ -1,5 +1,7 @@
 package com.msr.blog.article;
 
+import com.msr.blog.MasUser.MasUser;
+import com.msr.blog.MasUser.MasUserService;
 import com.msr.blog.category.Category;
 import com.msr.blog.category.CategoryRepository;
 import com.msr.blog.comment.Comment;
@@ -9,17 +11,21 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
+
 @Controller
 @RequestMapping("articles")
 public class ArtcileController {
     private final ArticleService articleService;
     private final CategoryRepository categoryRepository;
     private final CommentService commentService;
+    private final MasUserService masUserService;
 
-    public ArtcileController(ArticleService articleService, CategoryRepository categoryRepository, CommentService commentService) {
+    public ArtcileController(ArticleService articleService, CategoryRepository categoryRepository, CommentService commentService, MasUserService masUserService) {
         this.articleService = articleService;
         this.categoryRepository = categoryRepository;
         this.commentService = commentService;
+        this.masUserService = masUserService;
     }
 
     @GetMapping
@@ -64,10 +70,13 @@ public class ArtcileController {
     }
 
     @GetMapping("/comment/{id}")
-    public String comment(@ModelAttribute Article article,@PathVariable("id") String id, Model model)
+    public String comment(@ModelAttribute Article article, @PathVariable("id") String id, Model model, Principal principal)
     {
         // recuperer larticle
         Article retrievedArticle = articleService.find(Integer.parseInt(id));
+        //authUser
+        MasUser userConnected = masUserService.findManUserByUsername(principal.getName());
+        //System.out.println(  userConnected.getId());
         //recupéré ses commentaires
 
 //        Article findArticle = articleService.find(Integer.parseInt(id));
@@ -75,6 +84,7 @@ public class ArtcileController {
         model.addAttribute("article", articleService.find(Integer.parseInt(id)) );
         model.addAttribute("comments",retrievedArticle.getComments());
         model.addAttribute("comment", new Comment());
+        model.addAttribute("userId",userConnected.getId());
         return "pages/article/comment";
     }
 
