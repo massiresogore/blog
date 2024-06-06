@@ -15,7 +15,7 @@ public class Comment {
     @Column(nullable = false)
     private String content;
 
-    @ManyToOne
+    @ManyToOne( )
     @JoinColumn(nullable = false)
     private Article article;
 

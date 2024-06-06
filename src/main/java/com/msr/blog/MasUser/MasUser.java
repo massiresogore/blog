@@ -1,8 +1,11 @@
 package com.msr.blog.MasUser;
 
-import com.msr.blog.category.Category;
+
 import com.msr.blog.comment.Comment;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Size;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,10 +16,15 @@ public class MasUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
+
+    @NotBlank
     @Column(nullable = false)
     private String name;
 
-    @Column(nullable = false)
+    @NotBlank
+    @Column(nullable = false, unique = true)
+    @Size(min = 3, max = 8, message = "pas null stp")
     private String username;
 
     @Column(nullable = false)

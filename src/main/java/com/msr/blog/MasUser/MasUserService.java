@@ -60,7 +60,6 @@ public class MasUserService {
          this.masUserRepository.deleteById(id);
     }
 
-
     public MasUser findManUserByUsername(String name) {
         return masUserRepository.findByUsername(name);
     }
